@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'customBottomSheet.dart';
+import 'solidBottomSheet.dart';
 
 class BodyWithBottomSheet extends StatelessWidget {
   final Widget body;
-  final CustomBottomSheet bottomSheet;
+  final SolidBottomSheet bottomSheet;
 
   BodyWithBottomSheet({this.body, this.bottomSheet});
 

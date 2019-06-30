@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'smoothness.dart';
 
-class CustomBottomSheet extends StatefulWidget {
+class SolidBottomSheet extends StatefulWidget {
   double height;
   final double minHeight;
   final double maxHeight;
@@ -11,23 +11,26 @@ class CustomBottomSheet extends StatefulWidget {
   final bool autoSwiped;
   final bool toggleVisibilityOnTap;
   final Smoothness smoothness;
+  final double elevation;
 
-  CustomBottomSheet(
-      {this.minHeight = 0,
-      this.maxHeight = 500,
-      this.body,
-      this.headerBar,
-      this.autoSwiped = true,
-      this.toggleVisibilityOnTap = false,
-      this.smoothness = Smoothness.medium}) {
+  SolidBottomSheet({
+    @required this.headerBar,
+    @required this.body,
+    this.minHeight = 0,
+    this.maxHeight = 500,
+    this.autoSwiped = true,
+    this.toggleVisibilityOnTap = false,
+    this.smoothness = Smoothness.medium,
+    this.elevation = 0.0,
+  }) {
     this.height = this.minHeight;
   }
 
   @override
-  _CustomBottomSheetState createState() => _CustomBottomSheetState();
+  _SolidBottomSheetState createState() => _SolidBottomSheetState();
 }
 
-class _CustomBottomSheetState extends State<CustomBottomSheet> {
+class _SolidBottomSheetState extends State<SolidBottomSheet> {
   void _onVerticalDragUpdate(data) {
     if (((widget.height - data.delta.dy) > widget.minHeight) &&
         ((widget.height - data.delta.dy) < widget.maxHeight)) {
@@ -57,13 +60,20 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         GestureDetector(
-            onVerticalDragUpdate: _onVerticalDragUpdate,
-            onVerticalDragEnd: widget.autoSwiped ? _onVerticalDragEnd : null,
-            onTap: widget.toggleVisibilityOnTap ? _onTap : null,
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              child: widget.headerBar,
-            )),
+          onVerticalDragUpdate: _onVerticalDragUpdate,
+          onVerticalDragEnd: widget.autoSwiped ? _onVerticalDragEnd : null,
+          onTap: widget.toggleVisibilityOnTap ? _onTap : null,
+          child: Container(
+            decoration: BoxDecoration(boxShadow: [
+              BoxShadow(
+                color: Colors.black54,
+                blurRadius: widget.elevation,
+              ),
+            ]),
+            width: MediaQuery.of(context).size.width,
+            child: widget.headerBar,
+          ),
+        ),
         AnimatedContainer(
             curve: Curves.easeOut,
             duration: Duration(milliseconds: widget.smoothness.value),

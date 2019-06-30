@@ -86,6 +86,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  solid_bottom_sheet:
+    dependency: "direct main"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "0.0.1"
   source_span:
     dependency: transitive
     description:
