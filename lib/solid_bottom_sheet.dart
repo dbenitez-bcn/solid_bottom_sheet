@@ -1,7 +1,5 @@
 library solid_bottom_sheet;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/bodyWithBottomSheet.dart';
+export 'src/customBottomSheet.dart';
+export 'src/smoothness.dart';
