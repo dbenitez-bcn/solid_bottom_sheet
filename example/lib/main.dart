@@ -41,14 +41,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     Image.asset("assets/cardImg.png"),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text("Flutter rules?",
-                      style: Theme.of(context).textTheme.title
+                      child: Text(
+                        "Flutter rules?",
+                        style: Theme.of(context).textTheme.title,
                       ),
                     ),
                   ],
                 ),
                 ButtonTheme.bar(
-                  // make buttons use the appropriate styles for cards
                   child: ButtonBar(
                     children: <Widget>[
                       FlatButton(
@@ -79,7 +79,10 @@ class _MyHomePageState extends State<MyHomePage> {
           color: Colors.white,
           height: 30,
           child: Center(
-            child: Text("Hello! I'm a bottom sheet :D"),
+            child: Text(
+              "Hello! I'm a bottom sheet :D",
+              style: Theme.of(context).textTheme.display1,
+            ),
           ),
         ),
       ),
