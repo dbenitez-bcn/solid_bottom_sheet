@@ -4,6 +4,7 @@ A custom bottom sheet simple to implement.
 
 ## Screenshots
 
+<img src="simple.gif" height="300em"><img src="fixed.gif" height="300em">
 
 ## Usage
 
