@@ -1,4 +1,4 @@
-# solid_bottom_sheet
+# Solid bottom sheet
 
 A custom bottom sheet simple to implement.
 
