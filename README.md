@@ -4,7 +4,7 @@ A custom bottom sheet simple to implement.
 
 ## Screenshots
 
-<img src="simple.gif" height="500em"><img src="fixed.gif" height="500em">
+<img src="https://github.com/dbenitez-bcn/solid_bottom_sheet/blob/master/simple.gif" height="500em"><img src="https://github.com/dbenitez-bcn/solid_bottom_sheet/blob/master/fixed.gif" height="500em">
 
 ## Usage
 
@@ -119,6 +119,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ## Contribute
 Feel free to fork and make pull request to enhance the package.
+
+Github <a href="https://github.com/dbenitez-bcn/solid_bottom_sheet">here</a>.
 
 ## Posible incoming features
 - **Controller** to be able to control the visibility internally from the app and don't depend of user's interaction.
