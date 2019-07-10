@@ -1,6 +1,6 @@
 # Solid bottom sheet
 
-A custom bottom sheet simple to implement.
+ A full customizable bottom sheet easy to implement. Just put it on your bottomSheet property on your Scaffold widget and see the magic. For more details see the README.md. Feel free to contribute. This package is open to recieve pull request on github. Enjoy! :D
 
 ## Screenshots
 
