@@ -22,6 +22,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  SolidController _controller = SolidController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,11 +55,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: <Widget>[
                       FlatButton(
                         child: const Text('NOPE'),
-                        onPressed: () {/* ... */},
+                        onPressed: () {
+                          /* ... */
+                        },
                       ),
                       FlatButton(
                         child: const Text('YEAH'),
-                        onPressed: () {/* ... */},
+                        onPressed: () {
+                          /* ... */
+                        },
                       ),
                     ],
                   ),
@@ -68,6 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       ),
       bottomSheet: SolidBottomSheet(
+        controller: _controller,
         headerBar: Container(
           color: Theme.of(context).primaryColor,
           height: 50,
@@ -86,6 +93,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            _controller.isOpened ? _controller.hide() : _controller.show();
+          }),
     );
   }
 }

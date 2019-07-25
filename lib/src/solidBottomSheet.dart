@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../solid_bottom_sheet.dart';
 import 'smoothness.dart';
 
 class SolidBottomSheet extends StatefulWidget {
@@ -44,9 +45,16 @@ class SolidBottomSheet extends StatefulWidget {
   // default it's false.
   final bool showOnAppear;
 
+  // This object used to control behavior internally
+  // from the app and don't depend of user's interaction.
+  // can hide and show  methods plus have isOpened variable
+  // to check widget visibility on a screen
+  final SolidController controller;
+
   SolidBottomSheet({
     @required this.headerBar,
     @required this.body,
+    this.controller,
     this.minHeight = 0,
     this.maxHeight = 500,
     this.autoSwiped = true,
@@ -74,10 +82,11 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
   }
 
   void _onVerticalDragEnd(data) {
-    if (data.primaryVelocity > 0)
-      _hide();
-    else
-      _show();
+    data.primaryVelocity > 0 ?  _hide() : _show();
+    if (widget.controller != null)
+      widget.controller.value = data.primaryVelocity <= 0;
+
+
   }
 
   void _onTap() {
@@ -85,6 +94,20 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
       _hide();
     else
       _show();
+  }
+
+  Function _controllerListener;
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.controller != null) {
+      widget.controller.value = widget.showOnAppear;
+      _controllerListener = () {
+        widget.controller.value ? _show() : _hide();
+      };
+      widget.controller.addListener(_controllerListener);
+    }
   }
 
   @override
@@ -129,5 +152,13 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
     setState(() {
       widget.height = widget.maxHeight;
     });
+  }
+
+  @override
+  void dispose() {
+    if (widget.controller != null) {
+      widget.controller.removeListener(_controllerListener);
+    }
+    super.dispose();
   }
 }
