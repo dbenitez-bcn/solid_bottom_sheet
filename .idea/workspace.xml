@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98b4aa68-2443-44e5-8555-0778b1403754" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solid_bottom_sheet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/solid_bottom_sheet.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -22,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="75" column="36" lean-forward="true" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+            <state relative-caret-position="569">
+              <caret line="96" column="31" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -43,7 +48,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/solidBottomSheet.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1305">
+            <state relative-caret-position="1350">
               <caret line="90" selection-start-line="90" selection-end-line="90" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -74,7 +79,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="349" />
     <option name="y" value="23" />
     <option name="width" value="1000" />
@@ -142,7 +147,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="349" y="23" width="1000" height="972" extended-state="0" />
+    <frame x="0" y="23" width="2048" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4994797" weight="0.34704968" />
@@ -153,14 +158,14 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.5005203" side_tool="true" weight="0.25972083" />
       <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.15432742" />
-      <window_info anchor="bottom" id="Run" order="1" weight="0.32045454" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.19146723" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.723205" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.22684704" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.3284091" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32778355" />
       <window_info anchor="bottom" id="Find" order="9" />
       <window_info anchor="bottom" id="Multi-OS Engine" order="10" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
@@ -234,13 +239,7 @@
     <entry file="file://$USER_HOME$/flutter/flutter/packages/flutter/lib/src/gestures/recognizer.dart" />
     <entry file="file://$USER_HOME$/flutter/flutter/packages/flutter/lib/src/gestures/pointer_router.dart" />
     <entry file="file://$USER_HOME$/flutter/flutter/packages/flutter/lib/src/gestures/monodrag.dart" />
-    <entry file="file://$USER_HOME$/Desktop/solid_bottom_sheet/lib/src/solidBottomSheet.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1765">
-          <caret line="160" column="3" selection-start-line="154" selection-start-column="2" selection-end-line="160" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../solid_bottom_sheet/lib/src/solidBottomSheet.dart" />
     <entry file="file://$PROJECT_DIR$/lib/src/solidController.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -248,17 +247,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Android/flutter/packages/flutter/lib/src/material/floating_action_button.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/flutter/packages/flutter/lib/src/material/floating_action_button.dart" />
     <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="75" column="36" lean-forward="true" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+        <state relative-caret-position="569">
+          <caret line="96" column="31" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -274,7 +267,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/solidBottomSheet.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1305">
+        <state relative-caret-position="1350">
           <caret line="90" selection-start-line="90" selection-end-line="90" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />

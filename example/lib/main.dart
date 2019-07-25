@@ -94,6 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.stars),
           onPressed: () {
             _controller.isOpened ? _controller.hide() : _controller.show();
           }),
