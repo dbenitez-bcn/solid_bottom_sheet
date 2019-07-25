@@ -4,7 +4,9 @@
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/dbenitez-bcn/solid_bottom_sheet/master/simple.gif" height="500em"><img src="https://raw.githubusercontent.com/dbenitez-bcn/solid_bottom_sheet/master/fixed.gif" height="500em">
+<img src="https://raw.githubusercontent.com/dbenitez-bcn/solid_bottom_sheet/master/simple.gif" height="500em">
+<img src="https://raw.githubusercontent.com/dbenitez-bcn/solid_bottom_sheet/master/fixed.gif" height="500em">
+<img src="https://raw.githubusercontent.com/dbenitez-bcn/solid_bottom_sheet/master/controller.gif" height="500em">
 
 ## Usage
 
@@ -54,6 +56,12 @@ SolidBottomSheet(
   // true, the body will be shown. If it's false the body will be hided. By
   // default it's false.
   final bool showOnAppear;
+
+  // This object used to control behavior internally
+  // from the app and don't depend of user's interaction.
+  // can hide and show  methods plus have isOpened variable
+  // to check widget visibility on a screen
+  final SolidController controller;
 ```
 
 ## Example
@@ -122,7 +130,11 @@ Feel free to fork and make pull request to enhance the package.
 
 Github <a href="https://github.com/dbenitez-bcn/solid_bottom_sheet">here</a>.
 
+## Special Thanks
+<b>Viktor Goltstein</b> - <a href="https://github.com/GoltVik?tab=overview&from=2019-07-01&to=2019-07-25">Github</a>
+
+
+
 ## Posible incoming features
-- **Controller** to be able to control the visibility internally from the app and don't depend of user's interaction.
 - A **Shadow** that covers the back of the bottom sheet to feel more native.
 - **Full view** option that displays the bottom sheet like a new navigated page. 
