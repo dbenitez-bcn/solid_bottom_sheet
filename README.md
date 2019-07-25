@@ -4,9 +4,7 @@
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/dbenitez-bcn/solid_bottom_sheet/master/simple.gif" height="500em">
-<img src="https://raw.githubusercontent.com/dbenitez-bcn/solid_bottom_sheet/master/fixed.gif" height="500em">
-<img src="https://raw.githubusercontent.com/dbenitez-bcn/solid_bottom_sheet/master/controller.gif" height="500em">
+<img src="https://raw.githubusercontent.com/dbenitez-bcn/solid_bottom_sheet/master/simple.gif" height="500em"><img src="https://raw.githubusercontent.com/dbenitez-bcn/solid_bottom_sheet/master/fixed.gif" height="500em"><img src="https://raw.githubusercontent.com/dbenitez-bcn/solid_bottom_sheet/master/controller.gif" height="500em">
 
 ## Usage
 
