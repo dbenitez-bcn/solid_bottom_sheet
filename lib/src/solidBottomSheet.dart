@@ -90,10 +90,10 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
   }
 
   void _onTap() {
-    if (widget.height == widget.maxHeight)
-      _hide();
-    else
-      _show();
+    final bool isOpened =  widget.height == widget.maxHeight;
+    isOpened ? _hide() : _show();
+    if (widget.controller != null)
+      widget.controller.value =  !isOpened;
   }
 
   Function _controllerListener;
