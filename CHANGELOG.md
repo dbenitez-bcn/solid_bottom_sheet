@@ -1,3 +1,7 @@
+## [0.1.4] - 2019-07-26.
+
+* SolidController bug fixed.
+
 ## [0.1.3] - 2019-07-25.
 
 * SolidController added to controllor the visibility of the SolidBottomSheet inside the app.
