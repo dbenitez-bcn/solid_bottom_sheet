@@ -28,10 +28,13 @@ class SolidBottomSheet extends StatefulWidget {
   // By default is true
   final bool autoSwiped;
 
-  // This flag enable that the user can toggle the visibility with just tapping on
-  // the header bar. By default is false
+  // This flag enable that the user can toggle the visibility with just tapping
+  // on the header bar. By default is false
   final bool toggleVisibilityOnTap;
   
+  // This flag enable that users can swipe the header and hide or show the 
+  // solid bottom sheet. Turn on false if you don't want to let the user 
+  // interact with the solid bottom sheet. By default is true. 
   final bool canUserSwipe;
 
   // This property defines how 'smooth' or fast will be the animation. Low is
