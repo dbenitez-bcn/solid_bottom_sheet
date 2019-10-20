@@ -31,6 +31,8 @@ class SolidBottomSheet extends StatefulWidget {
   // This flag enable that the user can toggle the visibility with just tapping on
   // the header bar. By default is false
   final bool toggleVisibilityOnTap;
+  
+  final bool canUserSwipe;
 
   // This property defines how 'smooth' or fast will be the animation. Low is
   // the slowest velocity and high is the fastest. By default is medium.
@@ -59,6 +61,7 @@ class SolidBottomSheet extends StatefulWidget {
     this.maxHeight = 500,
     this.autoSwiped = true,
     this.toggleVisibilityOnTap = false,
+    this.canUserSwipe = true,
     this.smoothness = Smoothness.medium,
     this.elevation = 0.0,
     this.showOnAppear = false,
@@ -82,11 +85,9 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
   }
 
   void _onVerticalDragEnd(data) {
-    data.primaryVelocity > 0 ?  _hide() : _show();
+    data.primaryVelocity > 0 ? _hide() : _show();
     if (widget.controller != null)
       widget.controller.value = data.primaryVelocity <= 0;
-
-
   }
 
   void _onTap() {
@@ -116,7 +117,7 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         GestureDetector(
-          onVerticalDragUpdate: _onVerticalDragUpdate,
+          onVerticalDragUpdate: widget.canUserSwipe ? _onVerticalDragUpdate: null,
           onVerticalDragEnd: widget.autoSwiped ? _onVerticalDragEnd : null,
           onTap: widget.toggleVisibilityOnTap ? _onTap : null,
           child: Container(
