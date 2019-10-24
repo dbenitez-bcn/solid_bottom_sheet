@@ -5,4 +5,4 @@
 5- Push to master
 6- Create a tag with the version
 7- run
-    >flutter packages pub publish --gry-run
+    >flutter packages pub publish --dry-run
