@@ -4,9 +4,6 @@ import '../solid_bottom_sheet.dart';
 import 'smoothness.dart';
 
 class SolidBottomSheet extends StatefulWidget {
-  // This is the current height of the bottomSheet's body
-  double height;
-
   // This controls the minimum height of the body. Must be greater or equal of 0.
   // By default is 0
   final double minHeight;
@@ -54,7 +51,7 @@ class SolidBottomSheet extends StatefulWidget {
   // from the app and don't depend of user's interaction.
   // can hide and show  methods plus have isOpened variable
   // to check widget visibility on a screen
-  final SolidController controller;
+  SolidController controller;
 
   SolidBottomSheet({
     @required this.headerBar,
@@ -70,7 +67,11 @@ class SolidBottomSheet extends StatefulWidget {
     this.showOnAppear = false,
   })  : assert(elevation >= 0.0),
         assert(minHeight >= 0.0) {
-    this.height = this.showOnAppear ? this.maxHeight : this.minHeight;
+    if(controller == null){
+      this.controller = SolidController();
+    }
+    this.controller.height = this.showOnAppear ? this.maxHeight : this.minHeight;
+    this.controller.smoothness = smoothness;
   }
 
   @override
@@ -79,22 +80,24 @@ class SolidBottomSheet extends StatefulWidget {
 
 class _SolidBottomSheetState extends State<SolidBottomSheet> {
   void _onVerticalDragUpdate(data) {
-    if (((widget.height - data.delta.dy) > widget.minHeight) &&
-        ((widget.height - data.delta.dy) < widget.maxHeight)) {
+    _setNativeSmoothness();
+    if (((widget.controller.height - data.delta.dy) > widget.minHeight) &&
+        ((widget.controller.height - data.delta.dy) < widget.maxHeight)) {
       setState(() {
-        widget.height -= data.delta.dy;
+        widget.controller.height -= data.delta.dy;
       });
     }
   }
 
   void _onVerticalDragEnd(data) {
+    _setUsersSmoothness();
     data.primaryVelocity > 0 ? _hide() : _show();
     if (widget.controller != null)
       widget.controller.value = data.primaryVelocity <= 0;
   }
 
   void _onTap() {
-    final bool isOpened =  widget.height == widget.maxHeight;
+    final bool isOpened =  widget.controller.height == widget.maxHeight;
     isOpened ? _hide() : _show();
     if (widget.controller != null)
       widget.controller.value =  !isOpened;
@@ -138,8 +141,8 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
         ),
         AnimatedContainer(
           curve: Curves.easeOut,
-          duration: Duration(milliseconds: widget.smoothness.value),
-          height: widget.height,
+          duration: Duration(milliseconds: widget.controller.smoothness.value),
+          height: widget.controller.height,
           child: widget.body,
         ),
       ],
@@ -148,13 +151,13 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
 
   void _hide() {
     setState(() {
-      widget.height = widget.minHeight;
+      widget.controller.height = widget.minHeight;
     });
   }
 
   void _show() {
     setState(() {
-      widget.height = widget.maxHeight;
+      widget.controller.height = widget.maxHeight;
     });
   }
 
@@ -164,5 +167,13 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
       widget.controller.removeListener(_controllerListener);
     }
     super.dispose();
+  }
+
+  void _setUsersSmoothness() {
+    widget.controller.smoothness = widget.smoothness;
+  }
+
+  void _setNativeSmoothness() {
+    widget.controller.smoothness = Smoothness.withValue(5);
   }
 }
