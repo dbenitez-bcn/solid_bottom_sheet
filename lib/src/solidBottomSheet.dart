@@ -4,8 +4,8 @@ import '../solid_bottom_sheet.dart';
 import 'smoothness.dart';
 
 class SolidBottomSheet extends StatefulWidget {
-  // This controls the minimum height of the body. Must be greater or equal of 0.
-  // By default is 0
+  // This controls the minimum height of the body. Must be greater or equal of
+  // 0. By default is 0
   final double minHeight;
 
   // This controls the minimum height of the body. By default is 500
@@ -28,10 +28,10 @@ class SolidBottomSheet extends StatefulWidget {
   // This flag enable that the user can toggle the visibility with just tapping
   // on the header bar. By default is false
   final bool toggleVisibilityOnTap;
-  
-  // This flag enable that users can swipe the header and hide or show the 
-  // solid bottom sheet. Turn on false if you don't want to let the user 
-  // interact with the solid bottom sheet. By default is true. 
+
+  // This flag enable that users can swipe the header and hide or show the
+  // solid bottom sheet. Turn on false if you don't want to let the user
+  // interact with the solid bottom sheet. By default is true.
   final bool canUserSwipe;
 
   // This property defines how 'smooth' or fast will be the animation. Low is
@@ -67,10 +67,11 @@ class SolidBottomSheet extends StatefulWidget {
     this.showOnAppear = false,
   })  : assert(elevation >= 0.0),
         assert(minHeight >= 0.0) {
-    if(controller == null){
+    if (controller == null) {
       this.controller = SolidController();
     }
-    this.controller.height = this.showOnAppear ? this.maxHeight : this.minHeight;
+    this.controller.height =
+        this.showOnAppear ? this.maxHeight : this.minHeight;
     this.controller.smoothness = smoothness;
   }
 
@@ -97,10 +98,9 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
   }
 
   void _onTap() {
-    final bool isOpened =  widget.controller.height == widget.maxHeight;
+    final bool isOpened = widget.controller.height == widget.maxHeight;
     isOpened ? _hide() : _show();
-    if (widget.controller != null)
-      widget.controller.value =  !isOpened;
+    if (widget.controller != null) widget.controller.value = !isOpened;
   }
 
   Function _controllerListener;
@@ -123,7 +123,8 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         GestureDetector(
-          onVerticalDragUpdate: widget.canUserSwipe ? _onVerticalDragUpdate: null,
+          onVerticalDragUpdate:
+              widget.canUserSwipe ? _onVerticalDragUpdate : null,
           onVerticalDragEnd: widget.autoSwiped ? _onVerticalDragEnd : null,
           onTap: widget.toggleVisibilityOnTap ? _onTap : null,
           child: Container(
