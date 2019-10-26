@@ -1,23 +1,13 @@
+import 'package:flutter_driver/driver_extension.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
-
 import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
 
 void main() {
-  testWidgets('Solid bottom sheet unit test', (WidgetTester tester) async {
-    final textFinder = find.byKey(Key('text'));
-    final headerFinder = find.byKey(Key('header'));
-    final bodyFinder = find.byKey(Key('body'));
-    final MyApp app = MyApp();
+  // This line enables the extension.
+  enableFlutterDriverExtension();
 
-    await tester.pumpWidget(app);
-
-    expect(textFinder, findsNothing);
-
-    tester.tap(headerFinder).then((res) {
-      expect(textFinder, findsOneWidget);
-    });
-  });
+  //Runs de application
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

@@ -144,7 +144,7 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
           curve: Curves.easeOut,
           duration: Duration(milliseconds: widget.controller.smoothness.value),
           height: widget.controller.height,
-          child: widget.body,
+          child: widget.controller.height > 0 ? widget.body : null,
         ),
       ],
     );
