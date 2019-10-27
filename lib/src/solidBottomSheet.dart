@@ -108,9 +108,12 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
   void _onVerticalDragEnd(data) {
     _setUsersSmoothness();
 
-    if (isDragDirectionUp && widget.controller.value) _show();
-    else if (!isDragDirectionUp && !widget.controller.value) _hide();
-    else widget.controller.value = isDragDirectionUp;
+    if (isDragDirectionUp && widget.controller.value)
+      _show();
+    else if (!isDragDirectionUp && !widget.controller.value)
+      _hide();
+    else
+      widget.controller.value = isDragDirectionUp;
   }
 
   void _onTap() {
