@@ -65,6 +65,14 @@ SolidBottomSheet(
   // can hide and show  methods plus have isOpened variable
   // to check widget visibility on a screen
   final SolidController controller;
+
+  // This method will be executed when the solid bottom sheet is completely
+  // opened.
+  final Function onShow;
+
+  // This method will be executed when the solid bottom sheet is completely
+  // closed.
+  final Function onHide;
 ```
 
 ## Example
@@ -140,4 +148,5 @@ Github <a href="https://github.com/dbenitez-bcn/solid_bottom_sheet">here</a>.
 
 ## Posible incoming features
 - A **Shadow** that covers the back of the bottom sheet to feel more native.
-- **Full view** option that displays the bottom sheet like a new navigated page. 
+- **Full view** option that displays the bottom sheet like a new navigated page.
+- **Controller callbacks** to execute when show() and hide() methods are invoked.
