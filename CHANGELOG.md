@@ -1,7 +1,12 @@
+## [0.1.8] - 2019-10-27.
+
+* Adds draggableBody property.
+
 ## [0.1.7] - 2019-10-27.
 
-* onHide callback added
-* onShow callback added
+* OnHide callback added
+* OnShow callback added
+* Adds a key property
 * Solid bottom sheet performance enhanced
 * Test coverage increased
 
