@@ -1,7 +1,8 @@
 # Solid bottom sheet
+[![Pub](https://img.shields.io/pub/v/solid_bottom_sheet.svg)](https://pub.dev/packages/solid_bottom_sheet)
 
  A full customizable bottom sheet easy to implement. Just put it on your bottomSheet property on your Scaffold widget and see the magic. For more details see the README.md. Feel free to contribute. This package is open to recieve pull request on github. Enjoy! :D
-
+ 
 ## Screenshots
 
 <img src="https://raw.githubusercontent.com/dbenitez-bcn/solid_bottom_sheet/master/simple.gif" height="500em"><img src="https://raw.githubusercontent.com/dbenitez-bcn/solid_bottom_sheet/master/fixed.gif" height="500em"><img src="https://raw.githubusercontent.com/dbenitez-bcn/solid_bottom_sheet/master/controller.gif" height="500em">
