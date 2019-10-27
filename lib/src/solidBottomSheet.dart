@@ -45,7 +45,7 @@ class SolidBottomSheet extends StatefulWidget {
   // This flag controls if the body is shown to the user by default. If it's
   // true, the body will be shown. If it's false the body will be hided. By
   // default it's false.
-  final bool showOnAppear;
+  final bool showOnAppear; // TODO: change to openedByDefault
 
   // This object used to control behavior internally
   // from the app and don't depend of user's interaction.
@@ -53,7 +53,16 @@ class SolidBottomSheet extends StatefulWidget {
   // to check widget visibility on a screen
   SolidController controller;
 
+  // This method will be executed when the solid bottom sheet is completely
+  // opened.
+  final Function onShow;
+
+  // This method will be executed when the solid bottom sheet is completely
+  // closed.
+  final Function onHide;
+
   SolidBottomSheet({
+    Key key,
     @required this.headerBar,
     @required this.body,
     this.controller,
@@ -65,8 +74,11 @@ class SolidBottomSheet extends StatefulWidget {
     this.smoothness = Smoothness.medium,
     this.elevation = 0.0,
     this.showOnAppear = false,
+    this.onShow,
+    this.onHide,
   })  : assert(elevation >= 0.0),
-        assert(minHeight >= 0.0) {
+        assert(minHeight >= 0.0),
+        super(key: key) {
     if (controller == null) {
       this.controller = SolidController();
     }
@@ -80,10 +92,13 @@ class SolidBottomSheet extends StatefulWidget {
 }
 
 class _SolidBottomSheetState extends State<SolidBottomSheet> {
+  bool isDragDirectionUp;
+
   void _onVerticalDragUpdate(data) {
     _setNativeSmoothness();
     if (((widget.controller.height - data.delta.dy) > widget.minHeight) &&
         ((widget.controller.height - data.delta.dy) < widget.maxHeight)) {
+      isDragDirectionUp = data.delta.dy <= 0;
       setState(() {
         widget.controller.height -= data.delta.dy;
       });
@@ -92,15 +107,12 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
 
   void _onVerticalDragEnd(data) {
     _setUsersSmoothness();
-    data.primaryVelocity > 0 ? _hide() : _show();
-    if (widget.controller != null)
-      widget.controller.value = data.primaryVelocity <= 0;
+    widget.controller.value = isDragDirectionUp;
   }
 
   void _onTap() {
     final bool isOpened = widget.controller.height == widget.maxHeight;
-    isOpened ? _hide() : _show();
-    if (widget.controller != null) widget.controller.value = !isOpened;
+    widget.controller.value = !isOpened;
   }
 
   Function _controllerListener;
@@ -108,13 +120,11 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
   @override
   void initState() {
     super.initState();
-    if (widget.controller != null) {
-      widget.controller.value = widget.showOnAppear;
-      _controllerListener = () {
-        widget.controller.value ? _show() : _hide();
-      };
-      widget.controller.addListener(_controllerListener);
-    }
+    widget.controller.value = widget.showOnAppear;
+    _controllerListener = () {
+      widget.controller.value ? _show() : _hide();
+    };
+    widget.controller.addListener(_controllerListener);
   }
 
   @override
@@ -151,12 +161,14 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
   }
 
   void _hide() {
+    if (widget.onHide != null) widget.onHide();
     setState(() {
       widget.controller.height = widget.minHeight;
     });
   }
 
   void _show() {
+    if (widget.onShow != null) widget.onShow();
     setState(() {
       widget.controller.height = widget.maxHeight;
     });

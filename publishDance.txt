@@ -1,3 +1,4 @@
+0- Run all test
 1- Update README.md if needed
 2- Update CHANGELOG.md
 3- Update version number in pubspec.yml

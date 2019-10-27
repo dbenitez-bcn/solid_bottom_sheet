@@ -1,3 +1,10 @@
+## [0.1.7] - 2019-10-27.
+
+* onHide callback added
+* onShow callback added
+* Solid bottom sheet performance enhanced
+* Test coverage increased
+
 ## [0.1.6] - 2019-10-26.
 
 * Improved the native feeling of the smoothness.
