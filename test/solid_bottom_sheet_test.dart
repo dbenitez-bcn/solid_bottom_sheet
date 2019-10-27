@@ -5,40 +5,39 @@ import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
 
 void main() {
   group('Solid bottom sheet', () {
+    final headerKey = Key("header");
+
     testWidgets('should open and close when tap', (WidgetTester tester) async {
       final SolidController controller = SolidController();
       final SolidBottomSheet bottomSheet = SolidBottomSheet(
         key: Key("solidFinder"),
         controller: controller,
         headerBar: Container(
-          key: Key(("header")),
+          key: headerKey,
           height: 50,
           child: Center(
             child: Text("Swipe here"),
           ),
         ),
         body: Container(
-          key: Key(("body")),
           color: Colors.white,
           height: 30,
           child: Center(
             child: Text(
               "Body text",
-              key: Key(("text")),
+              key: Key("text"),
             ),
           ),
         ),
         toggleVisibilityOnTap: true,
       );
-      final headerFinder = find.byKey(Key("header"));
+      final headerFinder = find.byKey(headerKey);
       final TestApp app = TestApp(bottomSheet);
 
       await tester.pumpWidget(app);
-      await tester.tap(headerFinder);
-      await tester.pump();
+      await tapToToggle(tester, headerFinder);
       expect(controller.isOpened, isTrue);
-      await tester.tap(headerFinder);
-      await tester.pump();
+      await tapToToggle(tester, headerFinder);
       expect(controller.isOpened, isFalse);
     });
 
@@ -48,30 +47,28 @@ void main() {
         key: Key("solidFinder"),
         controller: controller,
         headerBar: Container(
-          key: Key(("header")),
+          key: headerKey,
           height: 50,
           child: Center(
             child: Text("Swipe here"),
           ),
         ),
         body: Container(
-          key: Key(("body")),
           color: Colors.white,
           height: 30,
           child: Center(
             child: Text(
               "Body text",
-              key: Key(("text")),
+              key: Key("text"),
             ),
           ),
         ),
       );
-      final headerFinder = find.byKey(Key("header"));
+      final headerFinder = find.byKey(headerKey);
       final TestApp app = TestApp(bottomSheet);
 
       await tester.pumpWidget(app);
-      await tester.drag(headerFinder, Offset(0.0, -200.0));
-      await tester.pump();
+      await dragToOpen(tester, headerFinder);
       expect(controller.isOpened, isTrue);
     });
 
@@ -81,7 +78,7 @@ void main() {
         controller: controller,
         showOnAppear: true,
         headerBar: Container(
-          key: Key("header"),
+          key: headerKey,
           height: 50,
           child: Center(
             child: Text("Swipe here"),
@@ -92,16 +89,16 @@ void main() {
           height: 30,
         ),
       );
-      final headerFinder = find.byKey(Key("header"));
+      final headerFinder = find.byKey(headerKey);
       final TestApp app = TestApp(bottomSheet);
 
       await tester.pumpWidget(app);
-      await tester.drag(headerFinder, Offset(0.0, 200.0));
-      await tester.pump();
+      await dragToClose(tester, headerFinder);
       expect(controller.isOpened, isFalse);
     });
 
-    testWidgets('should call onShow when is opened', (WidgetTester tester) async {
+    testWidgets('should call onShow when is opened',
+        (WidgetTester tester) async {
       int timesExecuted = 0;
       final SolidController controller = SolidController();
       final SolidBottomSheet bottomSheet = SolidBottomSheet(
@@ -111,7 +108,7 @@ void main() {
           timesExecuted++;
         },
         headerBar: Container(
-          key: Key("header"),
+          key: headerKey,
           height: 50,
           child: Center(
             child: Text("Swipe here"),
@@ -122,25 +119,22 @@ void main() {
           height: 30,
         ),
       );
-      final headerFinder = find.byKey(Key("header"));
+      final headerFinder = find.byKey(headerKey);
       final TestApp app = TestApp(bottomSheet);
 
       await tester.pumpWidget(app);
-      await tester.drag(headerFinder, Offset(0.0, -200.0));
-      await tester.pump();
+      await dragToOpen(tester, headerFinder);
       expect(timesExecuted, 1);
-      await tester.tap(headerFinder);
-      await tester.pump();
-      await tester.tap(headerFinder);
-      await tester.pump();
+      await tapToToggle(tester, headerFinder);
+      await tapToToggle(tester, headerFinder);
       expect(timesExecuted, 2);
-      await tester.tap(headerFinder);
-      await tester.pump();
+      await tapToToggle(tester, headerFinder);
       controller.show();
       expect(timesExecuted, 3);
     });
 
-    testWidgets('should call onHide when is closed', (WidgetTester tester) async {
+    testWidgets('should call onHide when is closed',
+        (WidgetTester tester) async {
       int timesExecuted = 0;
       final SolidController controller = SolidController();
       final SolidBottomSheet bottomSheet = SolidBottomSheet(
@@ -150,7 +144,7 @@ void main() {
           timesExecuted++;
         },
         headerBar: Container(
-          key: Key("header"),
+          key: headerKey,
           height: 50,
           child: Center(
             child: Text("Swipe here"),
@@ -161,26 +155,36 @@ void main() {
           height: 30,
         ),
       );
-      final headerFinder = find.byKey(Key("header"));
+      final headerFinder = find.byKey(headerKey);
       final TestApp app = TestApp(bottomSheet);
 
       await tester.pumpWidget(app);
-      await tester.tap(headerFinder);
-      await tester.pump();
-      await tester.drag(headerFinder, Offset(0.0, 200.0));
-      await tester.pump();
+      await tapToToggle(tester, headerFinder);
+      await dragToClose(tester, headerFinder);
       expect(timesExecuted, 1);
-      await tester.tap(headerFinder);
-      await tester.pump();
-      await tester.tap(headerFinder);
-      await tester.pump();
+      await tapToToggle(tester, headerFinder);
+      await tapToToggle(tester, headerFinder);
       expect(timesExecuted, 2);
-      await tester.tap(headerFinder);
-      await tester.pump();
+      await tapToToggle(tester, headerFinder);
       controller.hide();
       expect(timesExecuted, 3);
     });
   });
+}
+
+Future tapToToggle(WidgetTester tester, Finder headerFinder) async {
+  await tester.tap(headerFinder);
+  await tester.pump();
+}
+
+Future dragToClose(WidgetTester tester, Finder headerFinder) async {
+  await tester.drag(headerFinder, Offset(0.0, 200.0));
+  await tester.pump();
+}
+
+Future dragToOpen(WidgetTester tester, Finder headerFinder) async {
+  await tester.drag(headerFinder, Offset(0.0, -200.0));
+  await tester.pump();
 }
 
 class TestApp extends StatefulWidget {
