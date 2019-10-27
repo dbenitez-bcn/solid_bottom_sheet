@@ -41,6 +41,11 @@ SolidBottomSheet(
   // This flag enable that the user can toggle the visibility with just tapping on
   // the header bar. By default is false
   final bool toggleVisibilityOnTap;
+
+  // This flag enable that users can swipe the body and hide or show the
+  // solid bottom sheet. Turn on false if you don't want to let the user
+  // interact with the solid bottom sheet. By default is false.
+  final bool draggableBody;
   
   // This flag enable that users can swipe the header and hide or show the 
   // solid bottom sheet. Turn on false if you don't want to let the user 
