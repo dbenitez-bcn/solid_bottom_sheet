@@ -75,6 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       bottomSheet: SolidBottomSheet(
         controller: _controller,
+        draggableBody: true,
         headerBar: Container(
           color: Theme.of(context).primaryColor,
           height: 50,

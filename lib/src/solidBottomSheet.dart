@@ -29,10 +29,15 @@ class SolidBottomSheet extends StatefulWidget {
   // on the header bar. By default is false
   final bool toggleVisibilityOnTap;
 
+  // This flag enable that users can swipe the body and hide or show the
+  // solid bottom sheet. Turn on false if you don't want to let the user
+  // interact with the solid bottom sheet. By default is false.
+  final bool draggableBody;
+
   // This flag enable that users can swipe the header and hide or show the
   // solid bottom sheet. Turn on false if you don't want to let the user
   // interact with the solid bottom sheet. By default is true.
-  final bool canUserSwipe;
+  final bool canUserSwipe;// TODO: Change to draggableHeader
 
   // This property defines how 'smooth' or fast will be the animation. Low is
   // the slowest velocity and high is the fastest. By default is medium.
@@ -71,6 +76,7 @@ class SolidBottomSheet extends StatefulWidget {
     this.autoSwiped = true,
     this.toggleVisibilityOnTap = false,
     this.canUserSwipe = true,
+    this.draggableBody = false,
     this.smoothness = Smoothness.medium,
     this.elevation = 0.0,
     this.showOnAppear = false,
@@ -160,7 +166,13 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
           curve: Curves.easeOut,
           duration: Duration(milliseconds: widget.controller.smoothness.value),
           height: widget.controller.height,
-          child: widget.body,
+          child: GestureDetector(
+            onVerticalDragUpdate:
+                widget.draggableBody ? _onVerticalDragUpdate : null,
+            onVerticalDragEnd: widget.autoSwiped ? _onVerticalDragEnd : null,
+            onTap: widget.toggleVisibilityOnTap ? _onTap : null,
+            child: widget.body,
+          ),
         ),
       ],
     );

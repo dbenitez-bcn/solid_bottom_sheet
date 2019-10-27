@@ -6,11 +6,12 @@ import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
 void main() {
   group('Solid bottom sheet', () {
     final headerKey = Key("header");
+    final solidKey = Key("solidFinder");
 
     testWidgets('should open and close when tap', (WidgetTester tester) async {
       final SolidController controller = SolidController();
       final SolidBottomSheet bottomSheet = SolidBottomSheet(
-        key: Key("solidFinder"),
+        key: solidKey,
         controller: controller,
         headerBar: Container(
           key: headerKey,
@@ -25,7 +26,6 @@ void main() {
           child: Center(
             child: Text(
               "Body text",
-              key: Key("text"),
             ),
           ),
         ),
@@ -44,7 +44,7 @@ void main() {
     testWidgets('should open when drag up', (WidgetTester tester) async {
       final SolidController controller = SolidController();
       final SolidBottomSheet bottomSheet = SolidBottomSheet(
-        key: Key("solidFinder"),
+        key: solidKey,
         controller: controller,
         headerBar: Container(
           key: headerKey,
@@ -59,7 +59,6 @@ void main() {
           child: Center(
             child: Text(
               "Body text",
-              key: Key("text"),
             ),
           ),
         ),
@@ -168,6 +167,40 @@ void main() {
       await tapToToggle(tester, headerFinder);
       controller.hide();
       expect(timesExecuted, 3);
+    });
+
+    testWidgets('should open and close when drawableBody is true', (WidgetTester tester) async {
+      var bodyKey = Key("bodyKey");
+      final bodyFinder = find.byKey(bodyKey);
+      final SolidController controller = SolidController();
+      final SolidBottomSheet bottomSheet = SolidBottomSheet(
+        key: solidKey,
+        controller: controller,
+        headerBar: Container(
+          key: headerKey,
+          height: 50,
+          child: Center(
+            child: Text("Swipe here"),
+          ),
+        ),
+        body: Container(
+          key: bodyKey,
+          color: Colors.white,
+          height: 50,
+          child: Center(
+            child: Text(
+              "Body text",
+            ),
+          ),
+        ),
+        draggableBody: true,
+        showOnAppear: true,
+      );
+      final TestApp app = TestApp(bottomSheet);
+
+      await tester.pumpWidget(app);
+      await dragToClose(tester, bodyFinder);
+      expect(controller.isOpened, isFalse);
     });
   });
 }
