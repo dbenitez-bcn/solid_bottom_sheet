@@ -53,8 +53,12 @@ class SolidBottomSheet extends StatefulWidget {
   // to check widget visibility on a screen
   SolidController controller;
 
+  // This method will be executed when the solid bottom sheet is completely
+  // opened.
   final Function onShow;
 
+  // This method will be executed when the solid bottom sheet is completely
+  // closed.
   final Function onHide;
 
   SolidBottomSheet({
