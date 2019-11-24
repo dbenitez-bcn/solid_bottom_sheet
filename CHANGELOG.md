@@ -1,3 +1,9 @@
+## [0.1.9] - 2019-11-24.
+
+* Adds height stream on the controller.
+* Adds isOpen stream on the controller.
+* Improves internal performance.
+
 ## [0.1.8] - 2019-10-27.
 
 * Adds draggableBody property.
@@ -24,7 +30,7 @@
 
 ## [0.1.3] - 2019-07-25.
 
-* SolidController added to controllor the visibility of the SolidBottomSheet inside the app.
+* SolidController added to control the visibility of the SolidBottomSheet inside the app.
 
 ## [0.1.2] - 2019-07-11.
 
