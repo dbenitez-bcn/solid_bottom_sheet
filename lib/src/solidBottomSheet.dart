@@ -105,9 +105,7 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
     if (((widget.controller.height - data.delta.dy) > widget.minHeight) &&
         ((widget.controller.height - data.delta.dy) < widget.maxHeight)) {
       isDragDirectionUp = data.delta.dy <= 0;
-      setState(() {
-        widget.controller.height -= data.delta.dy;
-      });
+      widget.controller.height -= data.delta.dy;
     }
   }
 
@@ -162,17 +160,25 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
             child: widget.headerBar,
           ),
         ),
-        AnimatedContainer(
-          curve: Curves.easeOut,
-          duration: Duration(milliseconds: widget.controller.smoothness.value),
-          height: widget.controller.height,
-          child: GestureDetector(
-            onVerticalDragUpdate:
-                widget.draggableBody ? _onVerticalDragUpdate : null,
-            onVerticalDragEnd: widget.autoSwiped ? _onVerticalDragEnd : null,
-            onTap: widget.toggleVisibilityOnTap ? _onTap : null,
-            child: widget.body,
-          ),
+        StreamBuilder<double>(
+          stream: widget.controller.heightStream,
+          initialData: widget.controller.height,
+          builder: (_, snapshot) {
+            return AnimatedContainer(
+              curve: Curves.easeOut,
+              duration:
+                  Duration(milliseconds: widget.controller.smoothness.value),
+              height: snapshot.data,
+              child: GestureDetector(
+                onVerticalDragUpdate:
+                    widget.draggableBody ? _onVerticalDragUpdate : null,
+                onVerticalDragEnd:
+                    widget.autoSwiped ? _onVerticalDragEnd : null,
+                onTap: widget.toggleVisibilityOnTap ? _onTap : null,
+                child: widget.body,
+              ),
+            );
+          },
         ),
       ],
     );
@@ -180,23 +186,17 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
 
   void _hide() {
     if (widget.onHide != null) widget.onHide();
-    setState(() {
-      widget.controller.height = widget.minHeight;
-    });
+    widget.controller.height = widget.minHeight;
   }
 
   void _show() {
     if (widget.onShow != null) widget.onShow();
-    setState(() {
-      widget.controller.height = widget.maxHeight;
-    });
+    widget.controller.height = widget.maxHeight;
   }
 
   @override
   void dispose() {
-    if (widget.controller != null) {
-      widget.controller.removeListener(_controllerListener);
-    }
+    widget.controller.removeListener(_controllerListener);
     super.dispose();
   }
 

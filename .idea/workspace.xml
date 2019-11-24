@@ -2,23 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98b4aa68-2443-44e5-8555-0778b1403754" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/example/test_driver/app.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/test_driver/app_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/test_driver/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/solidBottomSheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/solidBottomSheet.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/solidController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/solidController.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/solid_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/solid_bloc.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publishDance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/publishDance.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/solid_bottom_sheet_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/solid_bottom_sheet_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solid_bottom_sheet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/solid_bottom_sheet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/solid_bloc_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/solid_bloc_test.dart" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.dart_tool/" />
-    <ignored path="$PROJECT_DIR$/.idea/" />
-    <ignored path="$PROJECT_DIR$/.pub/" />
-    <ignored path="$PROJECT_DIR$/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,23 +22,12 @@
   <component name="FavoritesManager">
     <favorites_list name="solid_bottom_sheet" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Dart File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>widget.smoothness.value</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>widget.controller.smoothness.value</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,65 +37,9 @@
       </map>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/lib/src/customBottomSheet.dart" />
-        <option value="$PROJECT_DIR$/example/README.md" />
-        <option value="$PROJECT_DIR$/lib/solid_bottom_sheet.dart" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/lib/app_test.dart" />
-        <option value="$PROJECT_DIR$/test_driver/app.dart" />
-        <option value="$PROJECT_DIR$/test_driver/main_test.dart" />
-        <option value="$PROJECT_DIR$/test_driver/app_test.dart" />
-        <option value="$PROJECT_DIR$/example/test_driver/main_test.dart" />
-        <option value="$PROJECT_DIR$/example/pubspec.yaml" />
-        <option value="$PROJECT_DIR$/example/test_driver/main.dart" />
-        <option value="$PROJECT_DIR$/example/test_driver/app.dart" />
-        <option value="$PROJECT_DIR$/example/test_driver/app_test.dart" />
-        <option value="$PROJECT_DIR$/test/solid_bottom_sheet_test.dart" />
-        <option value="$PROJECT_DIR$/lib/src/smoothness.dart" />
-        <option value="$PROJECT_DIR$/example/lib/main.dart" />
-        <option value="$PROJECT_DIR$/lib/src/solidController.dart" />
-        <option value="$PROJECT_DIR$/lib/src/solidBottomSheet.dart" />
-        <option value="$PROJECT_DIR$/publishDance.txt" />
-        <option value="$PROJECT_DIR$/CHANGELOG.md" />
-        <option value="$PROJECT_DIR$/pubspec.yaml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="2048" />
-    <option name="height" value="1053" />
-  </component>
+  <component name="ProjectId" id="1U2NVkRHNg3ejClbyofaGBEiML6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="solid_bottom_sheet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="solid_bottom_sheet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="solid_bottom_sheet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="solid_bottom_sheet" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
@@ -121,7 +48,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="flutter.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -148,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Flutter.main.dart">
+  <component name="RunManager" selected="Flutter Test.tests in test">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
       <method v="2" />
@@ -158,22 +85,26 @@
       <option name="testFile" value="$PROJECT_DIR$/test/solid_bottom_sheet_test.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="should open when tapped" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="should open when tapped" />
-      <option name="testFile" value="$PROJECT_DIR$/test/solid_bottom_sheet_test.dart" />
+    <configuration name="should emit the right values for height" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="should emit the right values for height" />
+      <option name="testFile" value="$PROJECT_DIR$/test/src/solid_bloc_test.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="tests in solid_bottom_sheet_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testFile" value="$PROJECT_DIR$/test/solid_bottom_sheet_test.dart" />
+    <configuration name="tests in solid_bloc_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/src/solid_bloc_test.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests in test" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testDir" value="$PROJECT_DIR$/test" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter Test.tests in test" />
         <item itemvalue="Flutter.main.dart" />
-        <item itemvalue="Flutter Test.tests in solid_bottom_sheet_test.dart" />
+        <item itemvalue="Flutter Test.tests in solid_bloc_test.dart" />
+        <item itemvalue="Flutter Test.should emit the right values for height" />
         <item itemvalue="Flutter Test.Solid bottom sheet unit test" />
-        <item itemvalue="Flutter Test.should open when tapped" />
-        <item itemvalue="Flutter.main.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -190,65 +121,18 @@
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="should_open_when_tapped - 2019.10.24 at 20h 47m 25s.xml">
-      <configuration name="should open when tapped" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="tests_in_solid_bottom_sheet_test_dart - 2019.10.24 at 20h 47m 55s.xml">
-      <configuration name="tests in solid_bottom_sheet_test.dart" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="tests_in_solid_bottom_sheet_test_dart - 2019.10.24 at 20h 49m 20s.xml">
-      <configuration name="tests in solid_bottom_sheet_test.dart" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="tests_in_solid_bottom_sheet_test_dart - 2019.10.24 at 21h 03m 29s.xml">
-      <configuration name="tests in solid_bottom_sheet_test.dart" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="tests_in_solid_bottom_sheet_test_dart - 2019.10.26 at 10h 02m 26s.xml">
-      <configuration name="tests in solid_bottom_sheet_test.dart" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="Solid_bottom_sheet_unit_test - 2019.10.26 at 10h 05m 00s.xml">
-      <configuration name="Solid bottom sheet unit test" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="tests_in_solid_bottom_sheet_test_dart - 2019.10.26 at 10h 59m 52s.xml">
-      <configuration name="tests in solid_bottom_sheet_test.dart" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="tests_in_solid_bottom_sheet_test_dart - 2019.10.26 at 11h 00m 15s.xml">
-      <configuration name="tests in solid_bottom_sheet_test.dart" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="tests_in_solid_bottom_sheet_test_dart - 2019.10.26 at 11h 03m 06s.xml">
-      <configuration name="tests in solid_bottom_sheet_test.dart" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="tests_in_solid_bottom_sheet_test_dart - 2019.10.27 at 17h 07m 14s.xml">
-      <configuration name="tests in solid_bottom_sheet_test.dart" configurationId="FlutterTestConfigType" />
-    </history-entry>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2048" height="1053" extended-state="0" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4994797" visible="true" weight="0.1226321" />
-      <window_info id="Structure" order="1" side_tool="true" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="Resources Explorer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.5005203" side_tool="true" weight="0.25972083" />
-      <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.15432742" />
-      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.18314256" />
-      <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5671176" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.22684704" />
-      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3298647" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.15712799" />
-      <window_info anchor="bottom" id="Find" order="9" weight="0.3298647" />
-      <window_info anchor="bottom" id="Multi-OS Engine" order="10" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="Theme Preview" order="1" />
-      <window_info anchor="right" id="Flutter Inspector" order="2" />
-      <window_info anchor="right" id="Flutter Outline" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-    </layout>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -260,227 +144,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/lib/simple_bottom_sheet.dart" />
-    <entry file="file://$USER_HOME$/flutter/flutter/packages/flutter/lib/src/material/app_bar.dart" />
-    <entry file="file://$USER_HOME$/flutter/flutter/packages/flutter/lib/src/material/card.dart" />
-    <entry file="file://$PROJECT_DIR$/lib/src/bodyWithBottomSheet.dart" />
-    <entry file="file://$PROJECT_DIR$/example/test/widget_test.dart" />
-    <entry file="file://$PROJECT_DIR$/example/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/flutter/flutter/packages/flutter/lib/src/widgets/framework.dart" />
-    <entry file="file://$USER_HOME$/flutter/flutter/packages/flutter/lib/src/gestures/recognizer.dart" />
-    <entry file="file://$USER_HOME$/flutter/flutter/packages/flutter/lib/src/gestures/pointer_router.dart" />
-    <entry file="file://$USER_HOME$/flutter/flutter/packages/flutter/lib/src/gestures/monodrag.dart" />
-    <entry file="file://$USER_HOME$/solid_bottom_sheet/lib/src/solidBottomSheet.dart" />
-    <entry file="file://$USER_HOME$/Library/Android/flutter/packages/flutter/lib/src/material/floating_action_button.dart" />
-    <entry file="file://$PROJECT_DIR$/lib/solid_bottom_sheet.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_driver/app.dart" />
-    <entry file="file://$PROJECT_DIR$/flutter_01.log" />
-    <entry file="file://$PROJECT_DIR$/flutter_03.log" />
-    <entry file="file://$PROJECT_DIR$/flutter_02.log" />
-    <entry file="file://$PROJECT_DIR$/lib/main.dart" />
-    <entry file="file://$PROJECT_DIR$/flutter_04.log" />
-    <entry file="file://$PROJECT_DIR$/example/pubspec.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1186" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_driver/main_test.dart" />
-    <entry file="file://$PROJECT_DIR$/test_driver/app_test.dart" />
-    <entry file="file://$USER_HOME$/Development/flutter/packages/flutter_test/lib/src/binding.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="665" column="2" selection-start-line="665" selection-start-column="2" selection-end-line="665" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Development/flutter/packages/flutter/lib/src/foundation/binding.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="539" column="17" selection-start-line="539" selection-start-column="17" selection-end-line="539" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Development/flutter/packages/flutter_test/lib/src/widget_tester.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="120" column="9" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Development/flutter/.pub-cache/hosted/pub.dartlang.org/stack_trace-1.9.3/lib/src/stack_zone_specification.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="140" column="6" selection-start-line="140" selection-start-column="6" selection-end-line="140" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Development/flutter/bin/cache/pkg/sky_engine/lib/core/iterable.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="551" column="24" selection-start-line="551" selection-start-column="24" selection-end-line="551" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Development/flutter/packages/flutter_test/lib/src/controller.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="255" column="17" selection-start-line="255" selection-start-column="17" selection-end-line="255" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/test_driver/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" selection-end-line="62" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Development/flutter/.pub-cache/hosted/pub.dartlang.org/test_core-0.2.5/lib/test_core.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/test_driver/app.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Development/flutter/packages/flutter/lib/src/widgets/gesture_detector.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1659">
-          <caret line="256" column="29" selection-start-line="256" selection-start-column="29" selection-end-line="256" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/solidController.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/smoothness.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/solidBottomSheet.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <folding>
-              <element signature="e#0#39#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/publishDance.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/test_driver/app_test.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="68" selection-start-line="51" selection-start-column="68" selection-end-line="51" selection-end-column="68" />
-          <folding>
-            <element signature="e#35#87#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/solid_bottom_sheet_test.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
