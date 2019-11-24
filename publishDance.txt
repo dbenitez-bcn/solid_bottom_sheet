@@ -1,7 +1,7 @@
 0- Run all test
 1- Update README.md if needed
 2- Update CHANGELOG.md
-3- Update version number in pubspec.yml
+3- Update version number in pubspec.yaml
 4- Commit changes
 5- Push to master
 7- run
