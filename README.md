@@ -81,6 +81,34 @@ SolidBottomSheet(
   final Function onHide;
 ```
 
+
+## Controller
+```dart
+  // This is the current smoothness of the bottomSheet
+  Smoothness smoothness;
+
+  // Returns the value of the height as stream
+  Stream<double> heightStream;
+
+  // Returns the value of the visibility as stream
+  Stream<bool> isOpenStream;
+
+  // Returns the value of the height
+  double height;
+
+  //  Returns if the solid bottom sheet is opened or not
+  bool isOpened;
+
+  // This method sets the value of the height using streams
+  void height(double value);
+
+  // Updates the visibility value to false
+  void hide();
+
+  // Updates the visibility value to true
+  void show();
+```
+
 ## Example
 
 ```dart
