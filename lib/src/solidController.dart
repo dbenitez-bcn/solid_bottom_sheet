@@ -7,10 +7,10 @@ class SolidController extends ValueNotifier<bool> {
   SolidBloc _bloc = SolidBloc();
 
   // This is the current height of the bottomSheet's body
-  double _height;
+  double? _height;
 
   // This is the current smoothness of the bottomSheet
-  Smoothness smoothness;
+  Smoothness? smoothness;
 
   SolidController() : super(false);
 
@@ -27,7 +27,7 @@ class SolidController extends ValueNotifier<bool> {
   }
 
   // Returns the value of the height
-  double get height => _height;
+  double get height => _height!;
 
   //  Returns if the solid bottom sheet is opened or not
   bool get isOpened => value;

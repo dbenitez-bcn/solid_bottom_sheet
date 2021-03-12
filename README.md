@@ -177,6 +177,7 @@ Github <a href="https://github.com/dbenitez-bcn/solid_bottom_sheet">here</a>.
 
 ## Special Thanks
 <b>Viktor Goltstein</b> - <a href="https://github.com/GoltVik?tab=overview&from=2019-07-01&to=2019-07-25">Github</a>
+<b>Nicolei Esperida</b> - <a href="https://github.com/haliknihudas666">Github</a>
 
 
 
