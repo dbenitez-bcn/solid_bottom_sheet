@@ -1,3 +1,7 @@
+## [0.1.9] - 2021-06-08.
+
+* Migrates to null-safety
+
 ## [0.1.9] - 2019-11-24.
 
 * Adds height stream on the controller.
