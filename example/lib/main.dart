@@ -45,28 +45,26 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         "Flutter rules?",
-                        style: Theme.of(context).textTheme.title,
+                        style: Theme.of(context).textTheme.titleLarge,
                       ),
                     ),
                   ],
                 ),
-                ButtonTheme.bar(
-                  child: ButtonBar(
-                    children: <Widget>[
-                      FlatButton(
-                        child: const Text('NOPE'),
-                        onPressed: () {
-                          /* ... */
-                        },
-                      ),
-                      FlatButton(
-                        child: const Text('YEAH'),
-                        onPressed: () {
-                          /* ... */
-                        },
-                      ),
-                    ],
-                  ),
+                OverflowBar(
+                  children: <Widget>[
+                    TextButton(
+                      child: const Text('NOPE'),
+                      onPressed: () {
+                        /* ... */
+                      },
+                    ),
+                    TextButton(
+                      child: const Text('YEAH'),
+                      onPressed: () {
+                        /* ... */
+                      },
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -89,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Center(
             child: Text(
               "Hello! I'm a bottom sheet :D",
-              style: Theme.of(context).textTheme.display1,
+              style: Theme.of(context).textTheme.headlineLarge,
             ),
           ),
         ),

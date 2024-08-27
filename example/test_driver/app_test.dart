@@ -8,7 +8,7 @@ void main() {
     final headerFinder = find.byValueKey('header');
     final bodyFinder = find.byValueKey('body');
 
-    FlutterDriver driver;
+    FlutterDriver? driver;
 
     // Connect to the Flutter driver before running any tests.
     setUpAll(() async {
@@ -17,15 +17,13 @@ void main() {
 
     // Close the connection to the driver after the tests have completed.
     tearDownAll(() async {
-      if (driver != null) {
-        driver.close();
-      }
+        driver?.close();
     });
 
     test('Should open when header is tapper', () async {
-      await driver.tap(headerFinder);
+      await driver!.tap(headerFinder);
 
-      expect(await driver.getText(textFinder), "Body text");
+      expect(await driver!.getText(textFinder), "Body text");
     });
   });
 
@@ -34,7 +32,7 @@ void main() {
     final headerFinder = find.byValueKey('header');
     final bodyFinder = find.byValueKey('body');
 
-    FlutterDriver driver;
+    FlutterDriver? driver;
 
     // Connect to the Flutter driver before running any tests.
     setUpAll(() async {
@@ -43,14 +41,12 @@ void main() {
 
     // Close the connection to the driver after the tests have completed.
     tearDownAll(() async {
-      if (driver != null) {
-        driver.close();
-      }
+      driver?.close();
     });
 
     test('Should open when header is scrolled up', () async {
-      await driver.scroll(headerFinder, 0, -200, Duration(seconds: 1));
-      expect(await driver.getText(textFinder), "Body text");
+      await driver!.scroll(headerFinder, 0, -200, Duration(seconds: 1));
+      expect(await driver!.getText(textFinder), "Body text");
     });
   });
 }

@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({required this.title});
 
   final String title;
 
@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Text(
               "Body text",
               key: Key(("text")),
-              style: Theme.of(context).textTheme.display1,
+              style: Theme.of(context).textTheme.headlineLarge,
             ),
           ),
         ),
