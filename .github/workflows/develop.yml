@@ -30,6 +30,6 @@ jobs:
       uses: reactivecircus/android-emulator-runner@v2
       with:
         api-level: 29
-        script: cd example && flutter test integration_test/app_test.dart
+        script: cd example && flutter create . && flutter test integration_test/app_test.dart
     #- name: Run integration tests
     #  run: cd example && flutter test integration_test/app_test.dart
