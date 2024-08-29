@@ -7,7 +7,7 @@ void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   group('Solid bottom sheet', () {
-    testWidgets('Should open and close when header is tapper',
+    testWidgets('Should open and close when header is tapped',
             (tester) async {
           final header = find.byKey(const ValueKey('header'));
           await tester.pumpWidget(TestApp());
