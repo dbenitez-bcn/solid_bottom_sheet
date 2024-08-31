@@ -29,4 +29,4 @@ jobs:
     - name: Create git tag
       run: git tag v$(yq '.version' ./pubspec.yaml) && git push origin v$(yq '.version' ./pubspec.yaml)
     - name: Publish package
-      run: flutter pub publish
+      run: flutter pub publish --force
