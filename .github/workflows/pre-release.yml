@@ -22,6 +22,7 @@ jobs:
       with:
         channel: stable
         flutter-version: 3.19.0
+    - uses: dart-lang/setup-dart@v1
     - name: Install dependencies
       run: flutter pub get
     - name: Run unit tests
