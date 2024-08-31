@@ -1,4 +1,8 @@
-## [0.1.10] - 2024-31-08.
+## [0.1.12] - 2024-31-08.
+
+* Minor changes
+
+## [0.1.11] - 2024-31-08.
 
 * Deprecates `canUserSwipe`
 * Deprecates `showOnAppear`
