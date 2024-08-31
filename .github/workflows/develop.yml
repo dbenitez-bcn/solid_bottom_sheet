@@ -3,16 +3,16 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Develop
+name: Workflow
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "develop", "main"  ]
   pull_request:
     branches: [ "develop", "main" ]
 
 jobs:
-  build:
+  workflow:
     runs-on: ubuntu-latest
     steps:
     - name: Clone repository

@@ -3,8 +3,23 @@ on:
   push:
     tags:
       - 'x[0-9]+.[0-9]+.[0-9]+*'
+permissions:
+  id-token: write
 jobs:
   publish:
-    permissions:
-      id-token: write # Required for authentication using OIDC
-    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.19.0
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Run unit tests
+        run: flutter test
+      - name: Publish package
+        run: flutter pub publish --force
