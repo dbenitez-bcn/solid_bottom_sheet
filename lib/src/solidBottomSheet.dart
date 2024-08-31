@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../solid_bottom_sheet.dart';
-import 'smoothness.dart';
 
 class SolidBottomSheet extends StatefulWidget {
   // This controls the minimum height of the body. Must be greater or equal of
@@ -37,7 +36,10 @@ class SolidBottomSheet extends StatefulWidget {
   // This flag enable that users can swipe the header and hide or show the
   // solid bottom sheet. Turn on false if you don't want to let the user
   // interact with the solid bottom sheet. By default is true.
-  final bool canUserSwipe; // TODO: Change to draggableHeader
+  final bool draggableHeader;
+
+  @Deprecated("This property will be removed in 1.0.0 version. Consider using draggableHeader instead")
+  final bool canUserSwipe;
 
   // This property defines how 'smooth' or fast will be the animation. Low is
   // the slowest velocity and high is the fastest. By default is medium.
@@ -50,7 +52,10 @@ class SolidBottomSheet extends StatefulWidget {
   // This flag controls if the body is shown to the user by default. If it's
   // true, the body will be shown. If it's false the body will be hided. By
   // default it's false.
-  final bool showOnAppear; // TODO: change to openedByDefault
+  final bool openByDefault;
+
+  @Deprecated("This property will be removed in 1.0.0 version. Consider using openByDefault instead")
+  final bool showOnAppear;
 
   // This object used to control behavior internally
   // from the app and don't depend of user's interaction.
@@ -76,10 +81,12 @@ class SolidBottomSheet extends StatefulWidget {
     this.autoSwiped = true,
     this.toggleVisibilityOnTap = false,
     this.canUserSwipe = true,
+    this.draggableHeader = true,
     this.draggableBody = false,
     this.smoothness = Smoothness.medium,
     this.elevation = 0.0,
     this.showOnAppear = false,
+    this.openByDefault = false,
     this.onShow,
     this.onHide,
   })  : assert(elevation >= 0.0),
@@ -89,7 +96,7 @@ class SolidBottomSheet extends StatefulWidget {
       this.controller = SolidController();
     }
     this.controller!.height =
-        this.showOnAppear ? this.maxHeight : this.minHeight;
+    this.showOnAppear || this.openByDefault ? this.maxHeight : this.minHeight;
     this.controller!.smoothness = smoothness;
   }
 
@@ -130,7 +137,7 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
   @override
   void initState() {
     super.initState();
-    widget.controller!.value = widget.showOnAppear;
+    widget.controller!.value = widget.showOnAppear  || widget.openByDefault;
     _controllerListener = () {
       widget.controller!.value ? _show() : _hide();
     };
@@ -144,7 +151,7 @@ class _SolidBottomSheetState extends State<SolidBottomSheet> {
       children: <Widget>[
         GestureDetector(
           onVerticalDragUpdate:
-              widget.canUserSwipe ? _onVerticalDragUpdate : null,
+              widget.canUserSwipe || widget.draggableHeader ? _onVerticalDragUpdate : null,
           onVerticalDragEnd: widget.autoSwiped ? _onVerticalDragEnd : null,
           onTap: widget.toggleVisibilityOnTap ? _onTap : null,
           child: Container(
