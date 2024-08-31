@@ -1,3 +1,9 @@
+## [0.1.10] - 2024-31-08.
+
+* Deprecates `canUserSwipe`
+* Deprecates `showOnAppear`
+* Increase flutter version
+
 ## [0.1.10] - 2021-06-08.
 
 * Migrates to null-safety
