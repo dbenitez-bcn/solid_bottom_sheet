@@ -26,8 +26,6 @@ jobs:
       run: flutter pub get
     - name: Run unit tests
       run: flutter test
-    - name: Pub check
-      run: flutter pub publish --dry-run
     - name: Create git tag
       run: git tag v$(yq '.version' ./pubspec.yaml) && git push origin v$(yq '.version' ./pubspec.yaml)
     - name: Publish package
