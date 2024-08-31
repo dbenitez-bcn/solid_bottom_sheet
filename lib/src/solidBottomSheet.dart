@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../solid_bottom_sheet.dart';
-import 'smoothness.dart';
 
 class SolidBottomSheet extends StatefulWidget {
   // This controls the minimum height of the body. Must be greater or equal of
